@@ -1,10 +1,10 @@
-import 'package:examenu2/modules/entities/gastos.dart';
+import 'package:examenu2/modules/entities/carros.dart';
 import 'package:flutter/material.dart';
 
-class ListGastosData extends StatelessWidget {
-  const ListGastosData({super.key, required this.gastos, required this.onTap});
+class ListCarrosData extends StatelessWidget {
+  const ListCarrosData({super.key, required this.carros, required this.onTap});
 
-  final Gastos gastos;
+  final Carros carros;
   final VoidCallback onTap;
 
   @override
@@ -16,8 +16,8 @@ class ListGastosData extends StatelessWidget {
         children: [
           
           Image.network(
-            gastos.imagen.isNotEmpty
-                ? gastos.imagen
+            carros.image.isNotEmpty
+                ? carros.image
                 : 'https://via.placeholder.com/50x50.png',
             width: 50,
             height: 50,
@@ -29,18 +29,28 @@ class ListGastosData extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                gastos.cantidad.toString(),
+                'Numero de poliza: ${carros.numPoliza}',
                 style:
                     const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
-                gastos.descripcion,
+                carros.nombre,
+                style: const TextStyle(fontSize: 12),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                carros.modelo,
+                style: const TextStyle(fontSize: 12),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Fecha de expiracion: ${carros.fechaExp}',
                 style: const TextStyle(fontSize: 12),
               ),
             ],
           ),
-          const Spacer(),
+         /* const Spacer(),
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
@@ -52,14 +62,14 @@ class ListGastosData extends StatelessWidget {
                       : Colors.yellow,
             ),
             child: Text(
-              gastos.cantidad >= 1000
+              carros.fechaExp >= 1000
                   ? 'Gasto alto'
                   : gastos.cantidad < 500
                       ? 'Poco gasto'
                       : 'Cuidado',
               style: const TextStyle(color: Colors.black),
             ),
-          )
+          )*/
         ],
       ),
     );

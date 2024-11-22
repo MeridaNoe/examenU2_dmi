@@ -29,7 +29,7 @@ class _NavigationState extends State<Navigation> {
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.money), label: 'Gastos'),
+          BottomNavigationBarItem(icon: Icon(Icons.car_repair), label: 'Carros'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
         ],
         currentIndex: _selectedIndex,

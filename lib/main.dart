@@ -4,7 +4,7 @@ import 'package:examenu2/modules/auth/register.dart';
 import 'package:examenu2/navigation/gastos_view.dart';
 import 'package:examenu2/navigation/navigation.dart';
 import 'package:examenu2/navigation/perfil.dart';
-import 'package:examenu2/widgets/gastos/agregar_gasto.dart';
+import 'package:examenu2/widgets/gastos/agregar_carros.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
         '/gastos': (context) => const GastosView(),
         '/perfil': (context) => const Perfil(),
         '/add_gastos': (context) => const AgregarGasto(),
-        
       },
     );
   }

@@ -31,7 +31,7 @@ class _RegisterState extends State<Register> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/dinero.png',
+                  'assets/coche.png',
                   width: 200,
                   height: 200,
                 ),
